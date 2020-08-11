@@ -141,3 +141,7 @@ def _despine(ax, all=False):
         ax.spines["right"].set_visible(False)
         ax.get_xaxis().tick_bottom()
         ax.get_yaxis().tick_left()
+
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
