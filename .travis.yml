@@ -9,7 +9,7 @@ script:
 - python -m pytest -vv --cov=betagen/
 deploy:
   provider: pypi
-  user: __token__
+  user: "__token__"
   on:
     tags: true
   distributions: sdist bdist_wheel
