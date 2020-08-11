@@ -3,16 +3,16 @@ python:
 - '3.6'
 - '3.7'
 install:
-- pip install --upgrade numpy  coverage pytest pytest-cov cython codecov
+- pip install --upgrade  coverage pytest pytest-cov codecov
 - python setup.py install
 script:
-- python -m pytest -vv --cov=rainbowpy/
+- python -m pytest -vv --cov=betagen/
 deploy:
   provider: pypi
-  user: "__token__"
+  user: __token__
   password:
-    secure: gudmkz9t0eWAZveYbBiJIaY0EP4Ara64RFIAx7iMAJZY8FmgRdUfYtD+zX3BJw5q+75xuwjKUlyUyjSzeRIH+fbpN5WJV/qpl9AKAhZJg7CKstEG3EA168eaFVZrAK6C4PRBL3W7Ut6TFOy0PeoTlVc774YvH+I4TJBtT0y2mXsgfyUlF1AXzd94Ta0vv7qlqeMpafLpBJeE/1XxbtS0USxoqO5fb64VqNg+1hJr54wd2LhZIUpHywJW4j7uMiPCpBV/N+XZMc5iwS4SjkOluxtqpwuRshpKRGRnC4zCkRT48YIVDRIamOcm6UDErGrsgOUK9qJqT4flK+kBTTowgbyWm6Wl7pZKbvsNi6SquRflzLrEDaed2v0OeZ5g+ZY682i1r9i/st9yW903Mv1Ne+k9nRJNGxcLImz4zMvf1kY2AYiTQSon8yszQTUQ77bal531NBxbvz7OVUwlkQ6Jv7ZS3EwTVlOKC7hZKhajf+5TlHomLrQoDx1slF0iv4altwLgJeN1WPcRalpZSX3U/z4jk0tJfhq6WMOOHxoMUTKN7TsAeKv6wEiiZX06v6wY1MqPyiobtUDuT1nlwngMI9Du98pnVNkZ1rjGfd+Ufi4RsEErDqkgt1twl5tE8/Cu12bGx507s0yEmhgfjgzO46oGomL3Cy1ihz5HXT2dIdI=
+    secure: Nzxl9Uhj6foTi1PSu1VX6zjU95RVeWPjo4ODhRUiZ5GjEBGbK8IDGqDbq5qiZk/J2a092gjqgt1e+sXlHsY7jJcNq0ZOe6F2ITabIdv7xGA5q8jnkuymWam0IVuNUMneDVUvU9uswQ+FpPFYWpfpgqfOm8Z/Aqvm27ky4DPxvFwoBPIHzJKCZtkx7lW60MWmabVaPbJUIiuPEANc+GYYEGs8+mqu2oVc/8BlIzROeYJ2NqDZCH+ymCSi3XnYy8j7i8YDs5lWzf5waDUpjRwIW4TbTgXMoufL6qceTlyhDFz4+oSU5byzzVjZ4Ntscz4m0s6LBqnzW3sEF+apSJJg72Nd3uy3kHdUTpYqEywD6Z9bG4opYPoknEdbj7VZJ5KwGqY9nrDwQA66+0+mg4vAIvWBQmaFONMWDhviLqd6QNnY34pny1ZkJNPEaUohxIEowByxfOgiRwNUkuAPSVMKv30LrT2jUorPFsYVCveGPg1Qwe3F3/uOfT2IOC20Pcwf7X1bFyEBQWfQkQOn9N/EIIfiNQHaTMiXnFeihdHjSumSRN1GAb3+d1T8gXB91ND4HA8igs+LcfIajCFAS4M3t8/MCCqbLJTTHCok4NDA8Mof/4GpUsbyTGjKqr2FBj9cSlh44laIkynHQLHkizUIwX5Jp6AeHuUDKSYvzW9pFRw=
   on:
     tags: true
-  distributions: "sdist bdist_wheel" # Your distributions here
+  distributions: sdist bdist_wheel
   skip_existing: true
